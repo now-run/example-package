@@ -1,0 +1,24 @@
+[Now Example Package]
+
+This document shows how a distributed package would
+look like.
+
+[procedures/example:hello]
+parameters {
+    who {
+        type string
+        default "world"
+    }
+}
+
+log "Hello, $who!"
+
+[commands/example:hello]
+parameters {
+    who {
+        type string
+        default "world"
+    }
+}
+
+example:hello $who
